@@ -22,6 +22,7 @@ class CRC32:
         :param crc32:
         :return:
         """
+        print("deepak", "bajaj?", sep="-------------------------")
         assert (
             0x00000000 <= crc32 <= 0xFFFFFFFF
         ), f"CRC32 is expected in range (exclusive) 0-{0xFFFFFFFF}, got {crc32}"
@@ -35,6 +36,7 @@ class CRC32:
         :param data: bytes object of data to be checksumed
         :return: int crc32
         """
+        print("deepak", "bajaj?", sep="-------------------------")
         return ba2int(
             CRC32.CALC.calculate_checksum(bytes_to_bits(byteswap_bytes(data), "little"))
         )
