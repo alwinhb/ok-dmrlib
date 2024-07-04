@@ -39,7 +39,9 @@ class CRC32:
         print("Byte Swap: ", byteswap_bytes(data))
         print("Bytes to bits (little) in use: ", bytes_to_bits(byteswap_bytes(data), "little"))
         print("Bytes to bits (big): ", bytes_to_bits(byteswap_bytes(data), "big"))
-        temp =  ba2int(
+        temp =  CRC32.CALC.calculate_checksum(bytes_to_bits(byteswap_bytes(data), "little"))
+        print("CRC32 raw: ", temp)
+        temp = ba2int(
             CRC32.CALC.calculate_checksum(bytes_to_bits(byteswap_bytes(data), "little"))
         )
         print("********* crc32  ************ ", temp)
