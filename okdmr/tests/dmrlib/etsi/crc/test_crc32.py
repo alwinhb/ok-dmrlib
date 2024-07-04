@@ -15,6 +15,7 @@ def test_crc32():
         # short data defined payload
         ("0600fb4f3d3f82afc6d80b42ce88668afc7d8b1807e83c308d95bb8be5dd59e95b2837e795af87005ae2a743535ca421601d", "c76ae25c")
     ]
+    
     # fmt:on
     # @formatter:on
 
@@ -23,3 +24,4 @@ def test_crc32():
             data=bytes.fromhex(databytes),
             crc32=int.from_bytes(bytes.fromhex(expected_crc32), byteorder="little"),
         ), f"CRC32 does not match in {(databytes, expected_crc32)} {CRC32.calculate(bytes.fromhex(databytes))}"
+        print ("I am databytes  in test  crc file ", databytes , " ********* crc32  ************ ", crc32)
