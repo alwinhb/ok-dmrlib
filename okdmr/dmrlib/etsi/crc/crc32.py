@@ -36,7 +36,8 @@ class CRC32:
         :param data: bytes object of data to be checksumed
         :return: int crc32
         """
-        print("raghav", "raghav?", sep="-------------------------")
-        return ba2int(
+        temp =  ba2int(
             CRC32.CALC.calculate_checksum(bytes_to_bits(byteswap_bytes(data), "little"))
         )
+        print ("I am databytes  in test  crc file ", bytes , " ********* crc32  ************ ", temp)
+        return temp
