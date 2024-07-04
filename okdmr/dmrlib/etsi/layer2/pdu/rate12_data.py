@@ -58,6 +58,8 @@ class Rate12Data(BitsInterface):
         crc9: Union[int, bitarray] = 0,
         crc32: Union[int, bytes] = 0,
     ):
+        print ("**** I am data file name pdu/rate12data ***", data);
+        print ("*******************************************************************************");
         self.data: bytes = data if isinstance(data, bytes) else bits_to_bytes(data)
         self.validate_packet_type(packet_type=packet_type, data_length=len(self.data))
         self.dbsn: int = dbsn if isinstance(dbsn, int) else ba2int(dbsn)
@@ -65,7 +67,10 @@ class Rate12Data(BitsInterface):
         self.crc32: int = (
             crc32 if isinstance(crc32, int) else int.from_bytes(crc32, byteorder="big")
         )
+        print ("**** I am crc32 file name pdu/rate12data ***", crc32);
 
+        print ("*******************************************************************************");
+        print ("**** I am data file name pdu/rate12data ***", data);
         self.crc9: int = crc9 if isinstance(crc9, int) else ba2int(crc9[::-1])
         calculated_crc9 = self.calculate_crc9()
         if self.crc9 <= 0:
