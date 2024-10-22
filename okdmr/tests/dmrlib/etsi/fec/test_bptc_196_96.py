@@ -114,6 +114,9 @@ def test_decode_encode():
         original_data_bits_deinterleaved: bitarray = BPTC19696.deinterleave_data_bits(
             bits=original_info_bits
         )
+        print ("To test if the bits are 96 in size")
+        print (original_data_bits_deinterleaved)
+        print (****************************************************************************)
 
         # 96 bits with added Hamming FEC, total of 196 bits
         encoded: bitarray = BPTC19696.encode(
