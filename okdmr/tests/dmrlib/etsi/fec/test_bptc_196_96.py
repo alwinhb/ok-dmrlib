@@ -119,11 +119,12 @@ def test_decode_encode():
         print (type(original_data_bits_deinterleaved))
         print ("****************************************************************************")
 
-        
+        my_data_deepak = input("010000010111010101110100011011110110110101101111011000100110100101101100011001010000000000000000")
+        inbits = bitarray(my_data_deepak)
 
         # 96 bits with added Hamming FEC, total of 196 bits
         encoded: bitarray = BPTC19696.encode(
-            bits_deinterleaved=original_data_bits_deinterleaved
+            bits_deinterleaved=inbits
         )
         assert encoded == original_info_bits
         print ("************************************************************************************************************************************************")
@@ -132,7 +133,7 @@ def test_decode_encode():
         print ("After")
 
         encoded_full: bitarray = BPTC19696.encode(
-            bits_deinterleaved=BPTC19696.deinterleave_all_bits(burst.info_bits_original)
+            inbits=BPTC19696.deinterleave_all_bits(burst.info_bits_original)
         )
         print ("NEW")
         print (encoded_full.bit_count())
