@@ -122,11 +122,13 @@ def test_decode_encode():
         assert encoded == original_info_bits
         print ("************************************************************************************************************************************************")
         print ("Today")
-        print (encoded)
+        print (encoded.bit_count())
+        print ("After")
 
         encoded_full: bitarray = BPTC19696.encode(
             bits_deinterleaved=BPTC19696.deinterleave_all_bits(burst.info_bits_original)
         )
-
-        print (encoded_full)
+        print ("NEW")
+        print (encoded_full.bit_count())
+        print ("AFTER")
         assert encoded_full == original_info_bits
