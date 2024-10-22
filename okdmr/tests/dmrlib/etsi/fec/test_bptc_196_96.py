@@ -122,7 +122,7 @@ def test_decode_encode():
         assert encoded == original_info_bits
         print ("************************************************************************************************************************************************")
         print ("Today")
-        print (encoded.bit_count())
+        print (encoded)
         print ("After")
 
         encoded_full: bitarray = BPTC19696.encode(
