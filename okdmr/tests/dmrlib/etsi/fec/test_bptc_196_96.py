@@ -136,6 +136,6 @@ def test_decode_encode():
             inbits=BPTC19696.deinterleave_all_bits(burst.info_bits_original)
         )
         print ("NEW")
-        print (encoded_full.bit_count())
+        print (encoded_full)
         print ("AFTER")
         assert encoded_full == original_info_bits
