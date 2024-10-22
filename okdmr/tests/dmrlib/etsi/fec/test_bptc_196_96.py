@@ -133,8 +133,8 @@ def test_decode_encode():
         print ("After")
 
         encoded_full: bitarray = BPTC19696.encode(
-            inbits=BPTC19696.deinterleave_all_bits(burst.info_bits_original)
-        )
+           bits_deinterleaved=BPTC19696.deinterleave_all_bits(burst.info_bits_original)
+            )
         print ("NEW")
         print (encoded_full)
         print ("AFTER")
