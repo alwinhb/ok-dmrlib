@@ -120,6 +120,8 @@ def test_decode_encode():
             bits_deinterleaved=original_data_bits_deinterleaved
         )
         assert encoded == original_info_bits
+        print ("************************************************************************************************************************************************")
+        print ("Today")
         print (encoded)
 
         encoded_full: bitarray = BPTC19696.encode(
