@@ -119,7 +119,7 @@ def test_decode_encode():
         print (type(original_data_bits_deinterleaved))
         print ("****************************************************************************")
 
-        my_data_deepak = ("000000000000000000000000000000000000000000000000000000000000000001101111010101010101001111110011")
+        my_data_deepak = ("010000100100100101010010010101000100100001000100010000010101100111001010100001000010001111101001")
         inbits = bitarray(my_data_deepak)
 
         # 96 bits with added Hamming FEC, total of 196 bits
