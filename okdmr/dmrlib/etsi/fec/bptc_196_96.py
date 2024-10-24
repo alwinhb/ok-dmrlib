@@ -429,9 +429,11 @@ class BPTC19696:
             column,
             is_reserved,
             is_hamming,
-        ) in BPTC19696.INTERLEAVING_INDICES.items():
+        ) in BPTC19696.INTERLEAVING_INDICES.items():  
             if is_reserved:
                 continue
             out[interleave_index] = table[row - 1][column]
-
+            print ("Printing OUT")
+            print(out)
+        
         return out
