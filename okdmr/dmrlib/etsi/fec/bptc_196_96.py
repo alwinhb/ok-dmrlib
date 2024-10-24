@@ -433,7 +433,5 @@ class BPTC19696:
             if is_reserved:
                 continue
             out[interleave_index] = table[row - 1][column]
-            print ("Printing OUT")
-            print(out)
         
         return out
