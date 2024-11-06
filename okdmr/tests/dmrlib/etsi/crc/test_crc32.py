@@ -9,7 +9,7 @@ def test_crc32():
     # format: full hex payload, crc32 from last block
     data: List[Tuple[str, str]] = [
         # Rate 1 coded data
-        #("556e6368617261637465726973746963616c6c79", "3D9A0B21"),
+        ("556e6368617261637465726973746963616c6c79", "3D9A0B21"),
         # Rate 1/2
         ("d6790062620003bf000700000000000000000000", "210b9a3d"),
         # Rate 1/2 unconfirmed, contains Hytera RRS payload (IP/UDP packet, port 4001)
