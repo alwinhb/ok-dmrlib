@@ -38,3 +38,4 @@ class CRC32:
         return ba2int(
             CRC32.CALC.calculate_checksum(bytes_to_bits(byteswap_bytes(data), "little"))
         )
+        print("CRC 32 IS ", ba2int)
