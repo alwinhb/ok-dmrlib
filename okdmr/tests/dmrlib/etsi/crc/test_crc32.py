@@ -8,6 +8,8 @@ def test_crc32():
     # fmt:off
     # format: full hex payload, crc32 from last block
     data: List[Tuple[str, str]] = [
+        # Rate 1 coded data
+        ('556E6368617261637465726973746963616C6C790', '210b9a3d')
         # Rate 1/2
         ("d6790062620003bf000700000000000000000000", "210b9a3d"),
         # Rate 1/2 unconfirmed, contains Hytera RRS payload (IP/UDP packet, port 4001)
@@ -23,3 +25,5 @@ def test_crc32():
             data=bytes.fromhex(databytes),
             crc32=int.from_bytes(bytes.fromhex(expected_crc32), byteorder="little"),
         ), f"CRC32 does not match in {(databytes, expected_crc32)} {CRC32.calculate(bytes.fromhex(databytes))}"
+        crc32=int.from_bytes(bytes.fromhex(expected_crc32), byteorder="little")
+        print(crc32)
