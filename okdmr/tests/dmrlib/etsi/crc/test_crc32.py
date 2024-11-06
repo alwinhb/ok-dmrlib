@@ -28,4 +28,3 @@ def test_crc32():
         print("deepak")
         crc3=int.from_bytes(bytes.fromhex(expected_crc32), byteorder="big")
         print(crc3)
-        print("cac crc ", db)
