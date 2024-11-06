@@ -19,11 +19,10 @@ def test_crc32():
     ]
     # fmt:on
     # @formatter:on
-
+    crc32=int.from_bytes(bytes.fromhex(expected_crc32), byteorder="little")
+    print("32 bit crc   --> ", crc32)
     for databytes, expected_crc32 in data:
         assert CRC32.check(
             data=bytes.fromhex(databytes),
             crc32=int.from_bytes(bytes.fromhex(expected_crc32), byteorder="little"),
         ), f"CRC32 does not match in {(databytes, expected_crc32)} {CRC32.calculate(bytes.fromhex(databytes))}"
-        crc32=int.from_bytes(bytes.fromhex(expected_crc32), byteorder="little")
-        print("32 bit crc   --> ", crc32)
