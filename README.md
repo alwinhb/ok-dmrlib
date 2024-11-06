@@ -1,4 +1,4 @@
-# OK-DMR Lib
+# OK-DMR Lib test
 
 [![.github/workflows/sanity.yml](https://img.shields.io/github/actions/workflow/status/OK-DMR/ok-dmrlib/sanity.yml?style=flat-square&branch=master)](https://github.com/OK-DMR/ok-dmrlib/actions)
 [![Code Style: Python Black](https://img.shields.io/badge/code%20style-black-000000.svg?style=flat-square)](https://github.com/psf/black)
