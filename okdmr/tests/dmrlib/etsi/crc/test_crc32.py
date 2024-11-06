@@ -21,7 +21,6 @@ def test_crc32():
     # @formatter:on
     for databytes, expected_crc32 in data:
         db = CRC32.calculate(bytes.fromhex(databytes)
-                             print("calc crc 32 ", db)
         assert CRC32.check(
             data=bytes.fromhex(databytes),
             crc32=int.from_bytes(bytes.fromhex(expected_crc32), byteorder="little"),
@@ -29,3 +28,4 @@ def test_crc32():
         print("deepak")
         crc3=int.from_bytes(bytes.fromhex(expected_crc32), byteorder="big")
         print(crc3)
+        print("cac crc ", db)
